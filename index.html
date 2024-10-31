@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&display=swap" rel="stylesheet">
+
+<head>
+    <title>Проєкт</title>
+</head>
+<style>
+    body {
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1500px;
+    }
+
+    .pb {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        position: absolute;
+        top: 160px;
+        left: 12px;
+    }
+
+    .p {
+        font-family: 'Lato', sans-serif;
+        color: #868686;
+        font-size: 12px;
+        position: absolute;
+        top: 180px;
+        left: 12px;
+    }
+
+    .ref1 {
+        font-family: 'Lato', sans-serif;
+        color: #000000;
+        font-size: 14px;
+        text-decoration: none;
+        position: absolute;
+        top: 40px;
+        right: 39%;
+    }
+
+    .ref2 {
+        font-family: 'Lato', sans-serif;
+        color: #000000;
+        font-size: 14px;
+        text-decoration: none;
+        position: absolute;
+        top: 40px;
+        right: 45%;
+    }
+
+    .refh {
+        font-family: 'Lato', sans-serif;
+        color: #000000;
+        font-size: 14px;
+        text-decoration: underline;
+        text-decoration-color: #8100bdf8;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 2px;
+        border-radius: 5px;
+        position: absolute;
+        top: 40px;
+        right: 60%;
+    }
+
+    .price {
+        font-family: 'Lato', sans-serif;
+        font-size: large;
+        font-weight: 700;
+        position: absolute;
+        top: 237px;
+        right: 164px;
+    }
+
+    .article {
+        width: 250px;
+        height: 300px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #c7c7c7;
+        margin: 25px;
+        top: 85px;
+        left: 15px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .article:hover {
+        box-shadow: 0px 2px 15px rgb(66, 66, 66);
+        transition: 0.5s ease;
+    }
+
+    .pic {
+        width: 250px;
+        height: 150px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        top: 15px;
+        left: 50px;
+        position: absolute;
+    }
+
+    .hot {
+        width: 120px;
+        height: 76px;
+        left: -55px;
+        top: -45px;
+        position: absolute;
+    }
+
+    .buy {
+        font-family: 'Lato', sans-serif;
+        width: 250px;
+        height: 30px;
+        background-color: #8100bdf8;
+        color: #ffffff;
+        top: 270px;
+        right: 0px;
+        border-radius: 0 0 5px 5px;
+        border: 0px solid #ffffff;
+        font-size: 14px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .login {
+        font-family: 'Lato', sans-serif;
+        width: 80px;
+        height: 30px;
+        background-color: #8100bdf8;
+        color: #ffffff;
+        top: 30px;
+        right: 40px;
+        border-radius: 5px;
+        border: 0px solid #ffffff;
+        font-size: 14px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        opacity: 0;
+    }
+
+    .dropdownContent {
+        display: block;
+        position: absolute;
+        min-width: 160px;
+        border-radius: 5px;
+        top: 30px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+
+    .dropdownContent a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .item-1 {
+        background-color: #e6e6e6;
+        border-radius: 5px 5px 0px 0px;
+        cursor: pointer;
+    }
+
+    .item-1:hover {
+        background-color: #afafaf;
+    }
+
+    .item-2 {
+        background-color: #e6e6e6;
+        border-top: 1px solid #c9c9c9;
+        border-bottom: 1px solid #b9b9b9;
+        cursor: pointer;
+    }
+
+    .item-2:hover {
+        background-color: #afafaf;
+    }
+
+    .item-3 {
+        background-color: #e6e6e6;
+        border-radius: 0px 0px 5px 5px;
+        cursor: pointer;
+    }
+
+    .item-3:hover {
+        background-color: #afafaf;
+    }
+
+    .dropdown:hover .dropdownContent {
+        max-height: 300px;
+    }
+
+    .product {
+        width: 80px;
+        height: 30px;
+        background-color: #fffffff8;
+        color: #000000;
+        border-radius: 5px;
+        border: solid 1 px darkgrey;
+        font-size: 14px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    @media (max-width: 920px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .ref1 {
+            font-family: 'Lato', sans-serif;
+            color: #000000;
+            font-size: 14px;
+            text-decoration: none;
+            position: absolute;
+            top: 40px;
+            right: 30%;
+        }
+
+        .ref2 {
+            font-family: 'Lato', sans-serif;
+            color: #000000;
+            font-size: 14px;
+            text-decoration: none;
+            position: absolute;
+            top: 40px;
+            right: 40%;
+        }
+
+        .refh {
+            font-family: 'Lato', sans-serif;
+            color: #000000;
+            font-size: 14px;
+            text-decoration: underline;
+            text-decoration-color: #8100bdf8;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+            border-radius: 5px;
+            position: absolute;
+            top: 40px;
+            right: 60%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ref1,
+        .ref2,
+        .refh {
+            display: none;
+        }
+
+        .article {
+            width: 350px;
+            height: 300px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: 1px solid #c7c7c7;
+            margin: 15px;
+            top: 85px;
+            left: 15px;
+            position: relative;
+        }
+
+        .pic {
+            width: 350px;
+            height: 150px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .buy {
+            font-family: 'Lato', sans-serif;
+            width: 350px;
+            height: 30px;
+            background-color: #8100bdf8;
+            color: #ffffff;
+            top: 270px;
+            right: 0px;
+            border-radius: 0 0 5px 5px;
+            border: 0px solid #ffffff;
+            font-size: 14px;
+            position: absolute;
+        }
+
+        .price {
+            font-family: 'Lato', sans-serif;
+            font-size: large;
+            font-weight: 700;
+            position: absolute;
+            top: 237px;
+            left: 12px;
+        }
+
+        .dropdown {
+            opacity: 1;
+            position: absolute;
+            top: 30px;
+            right: 205px;
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=_Gh9zO0JJyivCftR" class="refh">Головна</a>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=_Gh9zO0JJyivCftR" class="ref1">FAQ</a>
+    <a href="https://youtu.be/dQw4w9WgXcQ?si=_Gh9zO0JJyivCftR" class="ref2">Наші соц. мережі</a>
+    <img src="C:\Users\Feezy\Desktop\2 курс\ВТВД\Лаби\Korobko_lab5\213.png" class="logo">
+    <div class="container">
+        <div class="article">
+            <img src="C:\Users\Feezy\Desktop\2 курс\ВТВД\Лаби\Korobko_lab5\11.png" class="hot">
+            <img src="C:\Users\Feezy\Desktop\2 курс\ВТВД\Лаби\Korobko_lab5\7.jpg" class="pic">
+            <div class="pb">Razer Viper V3 Pro</div>
+            <div class="p">
+                <p>Надлегка бездротова симетрична кіберспортивна миша</p>
+            </div>
+            <div class="price">6400 грн</div>
+            <form action="https://www.razer.com/gaming-mice/razer-viper-v3-pro/RZ01-05120100-R3U1#specs">
+                <input type="submit" value="Замовити" class="buy">
+            </form>
+        </div>
+        <div class="article">
+            <img src="C:\Users\Feezy\Desktop\2 курс\ВТВД\Лаби\Korobko_lab5\4.jpg" class="pic">
+            <div class="pb">Razer Viper V3 Pro</div>
+            <div class="p">
+                <p>Надлегка бездротова симетрична кіберспортивна миша</p>
+            </div>
+            <div class="price">6400 грн</div>
+            <form action="https://www.razer.com/gaming-mice/razer-viper-v3-pro/RZ01-05120100-R3U1#specs">
+                <input type="submit" value="Замовити" class="buy">
+            </form>
+        </div>
+        <div class="article">
+            <img src="C:\Users\Feezy\Desktop\2 курс\ВТВД\Лаби\Korobko_lab5\5.jpg" class="pic">
+            <div class="pb">Razer Viper V3 Pro</div>
+            <div class="p">
+                <p>Надлегка бездротова симетрична кіберспортивна миша</p>
+            </div>
+            <div class="price">6400 грн</div>
+            <form action="https://www.razer.com/gaming-mice/razer-viper-v3-pro/RZ01-05120100-R3U1#specs">
+                <input type="submit" value="Замовити" class="buy">
+            </form>
+        </div>
+        <div class="article">
+            <img src="C:\Users\Feezy\Desktop\2 курс\ВТВД\Лаби\Korobko_lab5\6.jpg" class="pic">
+            <div class="pb">Razer Viper V3 Pro</div>
+            <div class="p">
+                <p>Надлегка бездротова симетрична кіберспортивна миша</p>
+            </div>
+            <div class="price">6400 грн</div>
+            <form action="https://www.razer.com/gaming-mice/razer-viper-v3-pro/RZ01-05120100-R3U1#specs">
+                <input type="submit" value="Замовити" class="buy">
+            </form>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="product">Меню</button>
+        <div class="dropdownContent">
+            <a class="item-1">Головна</a>
+            <a class="item-2">FAQ</a>
+            <a class="item-3">Наші соц. мережі</a>
+        </div>
+    </div>
+    <form action="https://youtu.be/dQw4w9WgXcQ?si=_Gh9zO0JJyivCftR">
+        <input type="submit" value="Увійти" class="login">
+    </form>
+</body>
+
+</html>
